@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:todo_project/pages/widgets/custom_app_bar.dart';
+import 'package:todo_project/pages/widgets/menu_drawer.dart';
 
 class GoogleMaps extends StatefulWidget {
   const GoogleMaps({super.key});
@@ -24,6 +25,7 @@ class _GoogleMapsState extends State<GoogleMaps> {
       appBar: const CustomAppBar(
         title: 'Mapa',
       ),
+      drawer: MenuDrawer(),
       body: GoogleMap(
         onMapCreated: _onMapCreated,
         initialCameraPosition: CameraPosition(
